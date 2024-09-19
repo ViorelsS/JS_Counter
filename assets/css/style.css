@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('./fonts/GothamRounded-Medium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Gotham Rounded', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    --dark-green: #285956;
+    --soft-black: #040404;
+    --light-green: #43b27f;
+    --soft-white: #fefefe;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--dark-green);
+}
+
+.container {
+    height: 85vh;
+    width: 85vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    background: rgb(9, 217, 121);
+    background: radial-gradient(
+        circle,
+        rgba(9, 217, 121, 0.5775560224089635) 0%,
+        rgba(4, 4, 16, 0.6867997198879552) 44%,
+        rgba(4, 4, 4, 1) 100%
+    );
+
+    & .value {
+        color: white;
+        text-align: center;
+        font-size: 10rem;
+        border-radius: 32px;
+        background: var(--light-green);
+    }
+
+    & .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+
+        & button {
+            background: var(--soft-white);
+            width: 200px;
+            height: 160px;
+            font-size: 64px;
+            padding: 32px;
+            border-radius: 24px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & button:hover {
+            cursor: pointer;
+            background: gray;
+            color: white;
+        }
+    }
+}
