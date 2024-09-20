@@ -92,7 +92,6 @@ h1 {
     -webkit-transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
         translateY(-25vh);
     transition: transform 0.3s ease;
-    -webkit-transition: -webkit-transform 0.3s ease;
     background-color: var(--custom-gray);
 }
 
@@ -149,6 +148,7 @@ button:hover {
             translateY(-40vh);
         transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
             translateY(-40vh);
+        -webkit-transition: -webkit-transform 0.2s ease-in-out;
     }
 
     .buttons {
