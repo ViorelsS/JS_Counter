@@ -89,7 +89,10 @@ h1 {
     transform-origin: bottom center;
     transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
         translateY(-25vh);
+    -webkit-transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
+        translateY(-25vh);
     transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
     background-color: var(--custom-gray);
 }
 
@@ -140,6 +143,10 @@ button:hover {
 
     .spinner-thick {
         height: 20px;
+        -webkit-transform: rotate(
+                calc(var(--initial-rotation) + var(--rotation))
+            )
+            translateY(-40vh);
         transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
             translateY(-40vh);
     }
@@ -165,7 +172,7 @@ button:hover {
 
 @media screen and (min-width: 768px) {
     .spinner-thick {
-        transition: all transform 0.2s ease;
+        transition: transform 0.2s ease;
     }
 
     .number {
