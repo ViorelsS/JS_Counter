@@ -108,6 +108,7 @@ button {
     color: var(--soft-white);
     background: var(--orange);
     box-shadow: 3px 9px 9px 0px rgba(199, 199, 199, 0.45);
+    touch-action: manipulation;
 }
 
 button:hover {
