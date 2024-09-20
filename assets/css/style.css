@@ -165,7 +165,7 @@ button:hover {
 
 @media screen and (min-width: 768px) {
     .spinner-thick {
-        transition: transform 0.2s ease;
+        transition: all transform 0.2s ease;
     }
 
     .number {
