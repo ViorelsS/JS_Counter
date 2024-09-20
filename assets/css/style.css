@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Gotham Rounded';
-    src: url('./fonts/GothamRounded-Medium.otf') format('otf');
+    src: url('../fonts/GothamRounded-Medium.otf') format('otf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -21,6 +21,8 @@ body {
     --soft-gray: #e8eaef;
     --custom-gray: #9ba3aa;
     --dark-gray: #424649;
+    --dark-gray-85: #424649d8;
+    --box-shadow: 3px 9px 9px 0px rgba(199, 199, 199, 0.45);
 
     display: flex;
     justify-content: center;
@@ -89,8 +91,6 @@ h1 {
     transform-origin: bottom center;
     transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
         translateY(-25vh);
-    -webkit-transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
-        translateY(-25vh);
     transition: transform 0.3s ease;
     background-color: var(--custom-gray);
 }
@@ -100,17 +100,27 @@ h1 {
     flex-direction: column;
     gap: 8px;
 }
+.operation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 button {
     border: none;
     border-radius: 12px;
-    padding: 24px;
-    font-size: 64px;
+    padding: 16px;
+    font-size: 56px;
 
     color: var(--soft-white);
     background: var(--orange);
-    box-shadow: 3px 9px 9px 0px rgba(199, 199, 199, 0.45);
+    box-shadow: var(--box-shadow);
     touch-action: manipulation;
+}
+
+.reset-btn {
+    background: var(--dark-gray);
+    font-size: 44px;
 }
 
 button:hover {
@@ -118,14 +128,18 @@ button:hover {
     background: var(--orange-85);
 }
 
+.reset-btn:hover {
+    background: var(--dark-gray-85);
+}
+
 @media screen and (min-width: 320px) {
     .container {
-        height: 85%;
+        height: 95%;
         width: 80%;
         border-radius: 12px;
         justify-content: center;
         background: var(--soft-white);
-        box-shadow: 3px 9px 9px 0px rgba(199, 199, 199, 0.45);
+        box-shadow: var(--box-shadow);
     }
 
     h1 {
@@ -142,25 +156,31 @@ button:hover {
 
     .spinner-thick {
         height: 20px;
-        -webkit-transform: rotate(
-                calc(var(--initial-rotation) + var(--rotation))
-            )
-            translateY(-40vh);
         transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
             translateY(-40vh);
-        -webkit-transition: -webkit-transform 0.2s ease-in-out;
     }
 
     .buttons {
-        flex-direction: row;
-        margin-top: 80px;
-        width: 100%;
-        max-width: 320px;
+        flex-direction: column;
+        margin-top: 120px;
+        width: 60%;
+        max-width: 280px;
         justify-content: center;
     }
 
-    button {
-        min-width: 40%;
+    .reset-btn {
+        font-size: 32px;
+    }
+
+    .operation-buttons {
+        display: flex;
+        flex-direction: row;
+        max-width: 280px;
+    }
+
+    .operation-buttons button {
+        width: 50%;
+        font-size: 32px;
     }
 }
 
@@ -180,7 +200,7 @@ button:hover {
     }
 
     .buttons {
-        gap: 32px;
+        gap: 24px;
     }
 
     button {
