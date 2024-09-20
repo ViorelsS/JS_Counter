@@ -6,7 +6,7 @@ export class Counter {
 
     increment() {
         // this.value++;
-        this.value = this.value + 100;
+        this.value = this.value + 1000;
         // FIXME: se ci sono più di tot caratteri, diminuire la dimensione
     }
 
@@ -18,5 +18,9 @@ export class Counter {
 
     updateDisplay(element) {
         element.innerText = this.value;
+    }
+
+    getValue() {
+        return this.value;
     }
 }
