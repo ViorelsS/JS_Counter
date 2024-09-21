@@ -91,10 +91,10 @@ h1 {
     position: absolute;
     transform-origin: bottom center;
     transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
-        translateY(-25vh) translateZ(0);
-    transition: transform 0.3s ease;
+        translateY(-25vh);
+    transition: transform 0.5s ease; /* Transizione più lunga e fluida */
     background-color: var(--custom-gray);
-    will-change: transform;
+    will-change: transform; /* Ottimizzazione per la transizione */
 }
 
 .buttons {
