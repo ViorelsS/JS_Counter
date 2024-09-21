@@ -90,7 +90,7 @@ h1 {
     position: absolute;
     transform-origin: bottom center;
     transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
-        translateY(-25vh);
+        translateY(-25vh) translateZ(0);
     transition: transform 0.3s ease;
     background-color: var(--custom-gray);
 }
