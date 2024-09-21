@@ -7,9 +7,9 @@ export class Spinner {
 
     createThicks(thickElement, spinner) {
         const fragment = document.createDocumentFragment();
-        for (let i = 0; i < 35; i++) {
+        for (let i = 0; i < 11; i++) {
             const clone = thickElement.cloneNode(true);
-            clone.style.setProperty('--initial-rotation', `${i * 10}deg`);
+            clone.style.setProperty('--initial-rotation', `${i * 30}deg`);
             fragment.appendChild(clone);
             this.thicks.push(clone);  // Salviamo i thick nel nostro array
         }
