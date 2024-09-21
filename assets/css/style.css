@@ -79,7 +79,9 @@ h1 {
     width: 100%;
     position: absolute;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%);transform: translateZ(100px);
+    transform-style: preserve-3d;
+    
     will-change: transform;
 }
 
