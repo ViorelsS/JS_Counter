@@ -80,6 +80,7 @@ h1 {
     position: absolute;
     top: 0;
     transform: translateY(-50%);
+    will-change: transform;
 }
 
 .spinner-thick {
@@ -93,6 +94,7 @@ h1 {
         translateY(-25vh) translateZ(0);
     transition: transform 0.3s ease;
     background-color: var(--custom-gray);
+    will-change: transform;
 }
 
 .buttons {
