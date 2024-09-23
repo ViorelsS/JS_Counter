@@ -81,10 +81,7 @@ h1 {
     width: 100%;
     position: absolute;
     top: 0;
-    transform: translateY(-50%);transform: translateZ(100px);
-    transform-style: preserve-3d;
-    
-    will-change: transform;
+    transform: translateY(-50%);
 }
 
 .spinner-thick {
@@ -95,10 +92,9 @@ h1 {
     position: absolute;
     transform-origin: bottom center;
     transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
-        translateY(-25vh);
-    transition: transform 0.5s ease; /* Transizione più lunga e fluida */
+        translateY(-25vh) translateZ(0);
+    transition: transform 0.3s ease;
     background-color: var(--custom-gray);
-    will-change: transform; /* Ottimizzazione per la transizione */
 }
 
 .buttons {
