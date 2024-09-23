@@ -93,7 +93,10 @@ h1 {
     transform-origin: bottom center;
     transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
         translateY(-25vh) translateZ(0);
-    transition: transform 0.3s ease;
+    -webkit-transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
+        translateY(-25vh);
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    will-change: transform, -webkit-transform;
     background-color: var(--custom-gray);
 }
 

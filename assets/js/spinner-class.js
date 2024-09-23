@@ -19,10 +19,10 @@ export class Spinner {
         thicks.forEach((thick) => {
             const currentRotation =
                 parseFloat(thick.style.getPropertyValue('--rotation')) || 0;
-            thick.style.setProperty(
-                '--rotation',
-                `${currentRotation + increment}deg`
-            );
+            const newRotation = currentRotation + increment;
+            thick.style.setProperty('--rotation', `${newRotation}deg`);
+            thick.style.transform = `rotate(calc(var(--initial-rotation) + ${newRotation}deg)) translateY(-40vh)`;
+            thick.style.webkitTransform = `rotate(calc(var(--initial-rotation) + ${newRotation}deg)) translateY(-40vh)`;
         });
     }
 }
