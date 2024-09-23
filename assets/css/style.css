@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'Gotham Rounded';
-    src: url('../fonts/GothamRounded-Medium.otf') format('otf');
+    src: url('../fonts/GothamRounded-Medium.woff2') format('woff2'),
+        url('../fonts/GothamRounded-Medium.woff') format('woff'),
+        url('../fonts/GothamRounded-Medium.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -158,6 +160,8 @@ button:hover {
         height: 20px;
         transform: rotate(calc(var(--initial-rotation) + var(--rotation)))
             translateY(-40vh);
+        transition: transform 0.2s ease;
+        will-change: transform;
     }
 
     .buttons {
